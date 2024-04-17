@@ -1,0 +1,75 @@
+---
+publishDate: 2023-07-23T00:00:00Z
+title: ¿Por qué deberías trabajar en "los territorios"? - Parte 4
+excerpt: Tercera entrega de una serie sobre las razones para ejercer la psicología clínica en territorios diferentes a las ciudades principales.
+image: https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+
+
+category: Reflexiones basadas en datos
+tags:
+  - Conflicto armado
+  - Psicología clínica
+  - Análisis de datos
+  - R
+metadata:
+  canonical: https://astrowind.vercel.app/astrowind-template-in-depth
+---
+
+
+
+## Relación entre tasa de eventos violentos y tasa de atención en salud mental en Colombia.
+
+En [la primera parte de esta entrega](https://www.notion.so/I-4d2c15233f8d4b828c01bbee3942f617?pvs=21) anticipamos que es posible observar una relación negativa entre la tasa de eventos violentos en el marco del conflicto armado  y la tasa de atenciones en salud mental en los departamentos. También te presentamos dos informes en los que se analizan por separado esas dos variables; si no los has revisado te invitamos a que los consultes en [este post](https://www.notion.so/Por-qu-deber-as-trabajar-en-los-territorios-Parte-2-d668e5387a364e6889373d7f8ca4ade0?pvs=21) y [en este otro](https://www.notion.so/Por-qu-deber-as-trabajar-en-los-territorios-Parte-3-d6edc70885ac44f08c4eafa3dafa2403?pvs=21). 
+
+En el tercer y último informe de esta entrega tomaremos la información que hemos estado explorando y la usaremos para responder una importante pregunta ¿cuál es la relación entre la tasa departamental de atenciones en salud mental y la tasa departamental de eventos violentos en el periodo 2017 - 2021 en Colombia? 
+
+*(La carga de este recurso puede tomar algunos segundos)*
+
+<iframe title="correlacion atencion" width="800" height="536" src="https://app.powerbi.com/view?r=eyJrIjoiMzBkOWM0OGUtYTliMi00NTllLWJjYTYtMTk4ZWY4ZTg4OWFlIiwidCI6IjI5OWEyODgxLTEzODAtNDAyMC1iNDJmLTcxNWEzNWUxYmNhZiIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+
+
+
+
+Como en informes pasados, puedes filtrar la información según el año que te interese. Considera que el eje x del gráfico de dispersión nuevamente lo transformamos a una escala logarítmica. Esto se hace porque las diferencias interdepartamentales en esta variable son muy grandes, y conservar una escala aritmética usual dificultaría mucho el análisis visual. 
+
+Desafortunadamente, nuestra base de datos no contaba con RIPS discriminados para los departamentos de Amazonas, Guainía, Guaviare, Putumayo, San adnrés y Providencia, Vaupés y Vichada; por lo tanto no se consideraron en el análisis de correlación. 
+
+En la parte inferior izquierda encuentras las correlaciones r de Pearson y rho de Spearman para cada año y para el total del periodo. Recuerda que estos estadísticos arrojan un valor entre -1 y 1; valores positivos indican asociaciones positivas y, valores negativos, asociaciones negativas. Debido a que la distribución de las variables no cumple los supuestos para un análisis paramétrico, el estadístico válido es el coeficiente de Spearman; no obstante, se presenta el de Pearson porque es el cálculo que el software toma como base para dibujar la línea de tendencia en el gráfico.
+
+Si bien se observan correlaciones negativas bajas para cada uno de los años, estas no son estadísticamente significativas. Aunque el análisis visual año por año sugiere cierta tendencia negativa, el número anual de observaciones es bajo (25), lo cual aumenta el error estándar y por lo tanto la significancia estadística. Para el análisis del periodo en su conjunto sí tenemos un mayor número de observaciones y encontramos una relación que, si bien es un poco más baja que para los años 2019 - 2021; se presenta como estadísticamente significativa. 
+
+Así pues, es seguro decir que en Colombia, para el periodo 2017 - 2021 se presentó una correlación negativa con un tamaño del efecto pequeño, entre la tasa de atenciones en salud mental y la tasa de eventos victimizantes en el marco del conflicto armado. En otras palabras, los datos confirman una tendencia de menor número de atenciones en salud mental en los departamentos en los que se presenta mayor cantidad de este tipo de eventos. 
+
+En el informe esto es claro para algunos departamentos. Por ejemplo, si pasas el cursor sobre los puntos que se ubican más cerca al extremo inferior derecho del gráfico encontrarás departamentos en los que la tasa de eventos victimizantes es muy grande y la de atención en salud mental es baja. El caso más extremo es el del Chocó, pero también hay otros departamentos con un patrón similar, como Cauca, Arauca, Caquetá, Córdoba. 
+
+Por otra parte, departamentos como Cundinamarca, Boyacá, Atlántico, Quindío y Santander, se ubican en la zona del cuadrante superior derecho. 
+
+Un departamento que requiere toda nuestra atención es el de Casanare, pues presenta tasas importantes de eventos victimizantes, pero, entre los departamentos analizados,  sistemáticamente se presenta como el de menor tasa de atención. 
+
+Evidentemente, también hay excepciones. Por ejemplo Nariño se presenta en todo el periodo como un departamento con alta tasa de víctimas, pero estas cifras se corresponden con sus altas tasas de atención. 
+
+Se ha dicho que en algunas zonas en las que es más intenso el conflicto armado, también lo es el abandono del estado. Quizá estos resultados aportan evidencia de que es así. Podríamos preguntarnos si en esos departamentos hay un mayor déficit de profesionales de la salud mental; seguramente es así, pero quizá lo soportemos con datos en un futuro post. Mientras tanto, te invitamos a preguntarte ¿No es hora de priorizar tu trabajo sobre estos departamentos?
+
+### Comentarios finales.
+
+Lo que presentamos a lo largo de estas cuatro entregas es sólo una mirada cuantitativa con base en dos conjuntos de datos. Esto nos permite  hacer algunas reflexiones sobre la violencia y la salud mental en nuestro país, pero es evidente que la realidad es más compleja que eso. 
+
+La información reportada concierne a los departamentos como unidad de análisis. Es decir, reportamos los eventos de violencia y las atenciones en salud mental para cada departamento. Nótese que la información sobre esas atenciones no se discrimina para las víctimas de eventos violentos, sino que hace referencia a los servicios que se le prestaron a toda la población.
+
+Las categorías diagnósticas reportadas en los RIPS no reflejan de manera precisa el sufrimiento de las personas que son atendidas. De hecho, podrían aumentar el riesgo de patologizar experiencias humanas de sufrimiento que requieren atención pero no constituyen ninguna patología. 
+
+Además, Los datos sobre atención en salud mental se refieren a aquélla que se presta en las instituciones prestadoras de servicios de salud, pero no se puede perder de vista que ese no es el único componente para asegurar la salud mental en los territorios. De hecho, el informe de la Comisión de la verdad (2022a) recomienda programas colectivos, y referencia experiencias comunitarias con impactos positivos sobre el bienestar de las comunidades (2022b), que no se ven reflejados en los RIPS. 
+
+Con todo, la respuesta a la pregunta que da nombre a este post, es muy clara: Se debe trabajar en los territorios porque es necesario posicionar la salud mental en diferentes zonas de Colombia, no sólo porque su (nuestra) historia de violencia ha dado lugar a necesidades a las que podemos y debemos darle respuesta; sino también porque su acceso a los servicios de atención es, para algunos casos, reducido. Esto configura oportunidades de formación, investigación e impacto social en los que puedes tener un rol preponderante. 
+
+### Lista de referencias
+
+- Comisión para el esclarecimiento de la verdad, la convivencia y la no repetición (2022a). Hay futuro si hay verdad; informe final. *Tomo 5: Sufrir la guerra y rehacer la vida. Impactos, afrontamientos y resistencias.* Edición digital. Bogotá, Colombia.  ISBN 978-628-7590-21-2. https://www.comisiondelaverdad.co/sufrir-la-guerra-y-rehacer-la-vida
+- Comisión para el esclarecimiento de la verdad, la convivencia y la no repetición (2022b). Hay futuro si hay verdad; informe final. *Tomo 2: Hallazgos y recomendaciones de la Comisión de la verdad de Colombia.* Edición digital. Bogotá, Colombia.  ISBN 978-628-7590-20-5. https://www.comisiondelaverdad.co/hallazgos-y-recomendaciones-1
+- Departamento administrativo nacional de estadística - DANE (Septiembre de 2022). Proyecciones de población. https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion
+- Departamento administrativo nacional de estadística - DANE (Septiembre de 2022). Geovisor de consulta de codificación de la divipola. https://geoportal.dane.gov.co/geovisores/territorio/consulta-divipola-division-politico-administrativa-de-colombia/
+- Ministerio de Salud y protección social (2022). Registros Individuales de Prestación de Servicios de Salud - RIPS. [Conjunto de datos]. Versión del 3 de junio de 2022. Portal de Datos abiertos del estado colombiano. https://www.datos.gov.co/Salud-y-Protecci-n-Social/Registros-Individuales-de-Prestaci-n-de-Servicios-/4k9h-8qiu
+- Unidad para la atención y la reparación integral a las víctimas (Septiembre de 2022). Publicación de datos abiertos [Conjunto de datos]. https://www.unidadvictimas.gov.co/es/transparencia-y-acceso-la-informacion-publica/publicacion-de-datos-abiertos/161
+
+
