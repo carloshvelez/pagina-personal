@@ -25,7 +25,6 @@
     "@fontsource-variable/inter": "^5.0.17",
     "@fontsource/karla": "^5.0.19",
     "@fontsource/urbanist": "^5.0.19",
-    "@vercel/analytics": "^1.2.2",
     "astro": "^4.6.1",
     "astro-embed": "^0.7.1",
     "astro-icon": "^1.1.0",
