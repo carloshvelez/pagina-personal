@@ -1,0 +1,104 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/404/",
+			"headers": {
+				"Location": "/404"
+			},
+			"status": 308
+		},
+		{
+			"src": "/privacy/",
+			"headers": {
+				"Location": "/privacy"
+			},
+			"status": 308
+		},
+		{
+			"src": "/services/",
+			"headers": {
+				"Location": "/services"
+			},
+			"status": 308
+		},
+		{
+			"src": "/terms/",
+			"headers": {
+				"Location": "/terms"
+			},
+			"status": 308
+		},
+		{
+			"src": "/(?:\\/(.*?))?/([^/]+?)/(?:\\/(.*?))?/",
+			"headers": {
+				"Location": "/$1/$2/$3"
+			},
+			"status": 308
+		},
+		{
+			"src": "/(?:\\/(.*?))?/([^/]+?)/(?:\\/(.*?))?/",
+			"headers": {
+				"Location": "/$1/$2/$3"
+			},
+			"status": 308
+		},
+		{
+			"src": "/(?:\\/(.*?))?/(?:\\/(.*?))?/",
+			"headers": {
+				"Location": "/$1/$2"
+			},
+			"status": 308
+		},
+		{
+			"src": "/(?:\\/(.*?))?/",
+			"headers": {
+				"Location": "/$1"
+			},
+			"status": 308
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/404$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/privacy$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/rss\\.xml$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/services$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/terms$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		},
+		{
+			"src": "/.*",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}
