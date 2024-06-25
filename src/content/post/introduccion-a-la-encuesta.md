@@ -5,8 +5,7 @@ excerpt: Primera de una serie de entradas en las que usaremos R para preparar y 
 image: https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 category: Encuesta Nacional de Consumo de SPA en Colombia - 2019
 tags:
-  - Conflicto armado
-  - Psicología clínica
+  - ENCSPA - 2019
   - Análisis de datos
   - R
 metadata:  
