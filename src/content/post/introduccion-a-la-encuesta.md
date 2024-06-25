@@ -15,8 +15,8 @@ metadata:
 
 
 
-<script src="src/utils/pagedtable.js"></script>
-<link href = "src/utils/pagedtable.css" rel="stylesheet" />
+<script src="/pagedtable.js"></script>
+<link href = "/pagedtable.css" rel="stylesheet" />
 
 
 
