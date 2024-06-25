@@ -28,7 +28,17 @@ const metadata = {
 
   
     
+ <!-- BlogLatestPost Widget **************** -->
 
+  <BlogLatestPosts
+    id="blog"
+    title="Blogs y otros textos"
+    information={""}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
 
 
@@ -65,7 +75,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Proyecto 1: <br /><span class="text-2xl">Psytrack</span>
+        Psytrack
       </h3>
     </Fragment>
 
@@ -76,38 +86,43 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Descripción:',
-        description:
-          'Página web estática para una organización sin ánimo de lucro. Demuestra el uso de Astro para la creación simple de páginas web estáticas. Despliegue en Netlify.',
-      },
-      
-    ]}
-    image={{
-      src: '~/assets/images/tejiendo-vinculos.png',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Ir al proyecto',
-      icon: 'tabler:chevron-right',
-      href: 'https://tejiendovinculos.netlify.app/',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Proyecto 2: <br /><span class="text-2xl">Sitio Tejiendo Vínculos</span>
-      </h3>
-    </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+
+<Content
+isReversed
+isAfterContent={true}
+items={[
+  {
+    title: 'Descripción:',
+    description:
+      'Aplicación simple para la generación de base de datos SQLite3 y diccionarios de datos en formato JSON, a partir de los archivos .csv de la Encuesta Nacional de Consumo de SPA en Colombia',
+  },
+  
+]}
+image={{
+  src: '~/assets/images/encspa.png',
+  alt: 'mapa de colombia',
+}}
+callToAction={{
+  target: '_blank',
+  text: 'Ir al proyecto',
+  icon: 'tabler:chevron-right',
+  href: 'https://github.com/carloshvelez/create-and-load-database-encspa',
+}}
+>
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+   Preparación SQLite3 ENCSPA - 2019
+  </h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+
+
 
   <!-- Content Widget **************** -->
 
@@ -134,7 +149,41 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Proyecto 3: <br /><span class="text-2xl">Calculadora del índice de cambio fiable</span>
+        Calculadora del índice de cambio fiable
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Descripción:',
+        description:
+          'Página web estática para una organización sin ánimo de lucro. Demuestra el uso de Astro para la creación simple de páginas web estáticas. Despliegue en Netlify.',
+      },
+      
+    ]}
+    image={{
+      src: '~/assets/images/tejiendo-vinculos.png',
+      alt: 'Art and Music Poster Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Ir al proyecto',
+      icon: 'tabler:chevron-right',
+      href: 'https://tejiendovinculos.netlify.app/',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Sitio Tejiendo Vínculos
       </h3>
     </Fragment>
 
@@ -149,7 +198,7 @@ const metadata = {
   items={[
     {
       title: 'Descripcion:',
-      description: `Otros proyectos y scripts en los que he venido trabajando y a los que se puede acceder a través de mi dashboard en Git Hub`,
+      description: `Otros proyectos y scripts a los que se puede acceder a través de mi dashboard en Git Hub`,
     },
     
   ]}
@@ -178,17 +227,7 @@ const metadata = {
 
  
 
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Blogs y otros textos"
-    information={`Algunos artículos que he escrito en diferentes plataformas`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+ 
 
    <!-- Features3 Widget ************** -->
 

@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-06-20T00:00:00Z
 title: Encuesta Nacional de Consumo de SPA en Colombia - 2019. Preparando los DataFrames.
-excerpt: Primera de una serie de entradas, en las que usaremos R para preparar y analizar datos públicamente  disponibles, a fin de comprender con mayor profundidad el problema del consumo de SPA en Colombia. En esta primera entrada construirémos las funciones más importantes que usaremos a lo largo de la serie. 
+excerpt: Primera de una serie de entradas en las que usaremos R para preparar y analizar datos públicamente  disponibles, a fin de comprender con mayor profundidad el problema del consumo de SPA en Colombia. En esta primera entrada construirémos las funciones más importantes que usaremos a lo largo de la serie. 
 image: https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 category: Encuesta Nacional de Consumo de SPA en Colombia - 2019
 tags:
