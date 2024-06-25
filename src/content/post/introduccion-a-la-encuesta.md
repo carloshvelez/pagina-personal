@@ -1,6 +1,6 @@
 ---
 publishDate: 2024-06-20T00:00:00Z
-title: Encuesta Nacional de Consumo de SPA en Colombia - 2019. Preparando los DataFrames.
+title: Encuesta Nacional de Consumo de SPA en Colombia - 2019. Preparando los dataframes.
 excerpt: Primera de una serie de entradas en las que usaremos R para preparar y analizar datos públicamente  disponibles, a fin de comprender con mayor profundidad el problema del consumo de SPA en Colombia. En esta primera entrada construirémos las funciones más importantes que usaremos a lo largo de la serie. 
 image: https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 category: Encuesta Nacional de Consumo de SPA en Colombia - 2019
@@ -119,8 +119,8 @@ establecer_conexion <- function(){
 ```
 
 Con esa conexión ya podemos hacer consultas, que R transformará
-automáticamente en DataFrames. Recordaremos cerrar la conexión con la
-base de datos cada vez que hagamos una consulta, mediante
+automáticamente en dataframes. Recordaremos cerrar la conexión con la
+base de datos cada vfez que hagamos una consulta, mediante
 `dbDisconnect()`\`
 
 Veamos un panorama general de la base de datos:
@@ -196,13 +196,13 @@ str(df, vec.len=2)
      $ ORDEN             : int  2 1 1 1 1 ...
      $ id                : int  1 2 3 4 5 ...
 
-Obtenemos un DataFrame con 34 variables y 49756 observaciones, pero los
+Obtenemos un dataframe con 34 variables y 49756 observaciones, pero los
 nombres de las variables no son descriptivos y los valores están en
 formato numérico, pese a que el manual de la encuesta señala que la
 mayoría hacen referencia a variables cualitativas.
 
 Debido a ese problema, más tarde tendremos que configurar los
-DataFrames. Por ahora, vamos a programar un modo de hacer consultas en
+dataframes. Por ahora, vamos a programar un modo de hacer consultas en
 la base de datos.
 
 ### Generando consultas para la base de datos.
@@ -319,7 +319,7 @@ datos de la encuesta, lo cuales ya recopilamos previamente en un archivo
 JSON gracias al aplicativo python cuyo repositorio referenciamos al
 inicio de esta entrada.
 
-### Generando DataFrames más descriptivos
+### Generando dataframes más descriptivos
 
 El JSON con los microdatos del DANE lo tenemos en la carpeta “json_data”
 y está nombrado como “json_limpio.json”. Este archivo contiene la
@@ -350,7 +350,7 @@ preparar_df<- function(dataframe){
 }
 ```
 
-Ahora sí, tenemos listo nuestro DataFrame para hacer los análisis que
+Ahora sí, tenemos listo nuestro dataframe para hacer los análisis que
 requerimos:
 
 ``` r
@@ -413,7 +413,7 @@ head(info_municipios)
 `Dplyr`tiene excelentes opciones para hacer uniones similares a las que
 permite una consulta JOIN en una base de datos. En nuestro caso, por
 ejemplo, agregaremos una columna con nombres de departamento y municipio
-para cada una de las entradas del DataFrame con datos sociodemográficos
+para cada una de las entradas del dataframe con datos sociodemográficos
 que ya veníamos construyendo. Para lograrlo, usaremos la función
 `left_join()`:
 
@@ -421,7 +421,7 @@ que ya veníamos construyendo. Para lograrlo, usaremos la función
 df_completo <- df_demograficos %>% left_join(info_municipios[, c("cod_mpio", "Departamento", "Municipio")], by = c("Fusión de código departamento y código municipio" = "cod_mpio"))
 ```
 
-Listo, ya tenemos nuestro primer Dataframe. Las ultimas columnas son los
+Listo, ya tenemos nuestro primer dataframe. Las ultimas columnas son los
 nombres de departamento y municipio, así que vamos reorganizarlo para
 que se presenten en primer lugar:
 
@@ -439,7 +439,7 @@ head(df_completo)
 
 ### Respondiendo a nuestra primera pregunta.
 
-Con lo hecho hasta aquí ya podemos empezar a generar DataFrames útiles,
+Con lo hecho hasta aquí ya podemos empezar a generar dataframes útiles,
 que nos permitan responder, con base en datos, las preguntas que
 deseamos plantearnos sobre el consumo de SPA en Colombia, a menos desde
 los datos disponibles en 2019. Empecemos respondiéndonos una pregunta
