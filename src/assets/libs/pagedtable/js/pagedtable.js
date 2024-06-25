@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
   PagedTableDoc.initAll();
  
 });
-
 if (!Array.prototype.forEach) {
 
   Array.prototype.forEach = function(callback, thisArg) {
