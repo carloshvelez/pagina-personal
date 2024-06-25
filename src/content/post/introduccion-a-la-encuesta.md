@@ -10,7 +10,7 @@ tags:
   - Análisis de datos
   - R
 metadata:  
-  canonical: https://astrowind.vercel.app/astrowind-template-in-depth
+  canonical: https://carlos-velez.vercel.app/introduccion-a-la-encuesta
 ---
 
 

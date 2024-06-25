@@ -1,6 +1,6 @@
 site:
   name: Carlos Vélez
-  site: 'https://astrowind.vercel.app'
+  site: 'https://carlos-velez.vercel.app'
   base: '/'
   trailingSlash: false
 
