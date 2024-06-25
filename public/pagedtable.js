@@ -737,16 +737,16 @@ var PagedTable = function (pagedTable) {
     var totalRowsLabel = options.rows.total ? options.rows.total : totalRows;
     var totalRowsLabelFormat = totalRowsLabel.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
 
-    var infoText = (pageStart + 1) + "-" + pageEnd + " of " + totalRowsLabelFormat + " rows";
+    var infoText = (pageStart + 1) + "-" + pageEnd + " de " + totalRowsLabelFormat + " filas";
     if (totalRows < page.rows) {
-      infoText = totalRowsLabel + " row" + (totalRows != 1 ? "s" : "");
+      infoText = totalRowsLabel + " fila" + (totalRows != 1 ? "s" : "");
     }
     if (columns.total > columns.visible) {
       var totalColumnsLabel = options.columns.total ? options.columns.total : columns.total;
 
       infoText = infoText + " | " + (columns.number + 1) + "-" +
         (Math.min(columns.number + columns.visible, columns.total)) +
-        " of " + totalColumnsLabel + " columns";
+        " de " + totalColumnsLabel + " columnas";
     }
 
     return infoText;
@@ -781,7 +781,7 @@ var PagedTable = function (pagedTable) {
     footer = clearFooter();
 
     var next = document.createElement("a");
-    next.appendChild(document.createTextNode("Next"));
+    next.appendChild(document.createTextNode(">>"));
     next.onclick = function() {
       page.setPageNumber(page.number + 1);
       renderBody();
@@ -825,7 +825,7 @@ var PagedTable = function (pagedTable) {
     if (data.length > page.rows) footer.appendChild(pageNumbers);
 
     var previous = document.createElement("a");
-    previous.appendChild(document.createTextNode("Previous"));
+    previous.appendChild(document.createTextNode("<<"));
     previous.onclick = function() {
       page.setPageNumber(page.number - 1);
       renderBody();
