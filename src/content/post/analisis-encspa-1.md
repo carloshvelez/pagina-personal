@@ -490,28 +490,11 @@ Departamento Administrativo Nacional de Estadística (2020, 2024)
 
 ### Referencias
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0" line-spacing="2">
+- Departamento Administrativo Nacional de Estadística, \[DANE\]. (2020). *Encuesta Nacional de Consumo de Sustancias Psicoactivas en Colombia - 2019. Microdatos*. https://microdatos.dane.gov.co/index.php/catalog/680/.
 
-<div id="ref-dane2020" class="csl-entry">
+- Departamento Administrativo Nacional de Estadística, \[DANE\]. (2024). *Codificación de la División  Político Administrativa de Colombia - DIVIPOLA*. https://geoportal.dane.gov.co/descargas/divipola/DIVIPOLA_Municipios.xlsx.
 
-Departamento Administrativo Nacional de Estadística, \[DANE\]. (2020).
-*Encuesta Nacional de Consumo de Sustancias Psicoactivas en Colombia -
-2019. Microdatos*.
-<https://microdatos.dane.gov.co/index.php/catalog/680/>.
 
-</div>
-
-<div id="ref-dane2024" class="csl-entry">
-
-Departamento Administrativo Nacional de Estadística, \[DANE\]. (2024).
-*Codificación de la División Político Administrativa de Colombia -
-DIVIPOLA*.
-<https://geoportal.dane.gov.co/descargas/divipola/DIVIPOLA_Municipios.xlsx>.
-
-</div>
-
-</div>
 
 
 
