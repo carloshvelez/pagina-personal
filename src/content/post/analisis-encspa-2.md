@@ -25,6 +25,9 @@ metadata:
 
 En esta entrada presentaremos un tablero creado con el paquete Shiny de R. Posteriormente señalaremos los datos más relevantes. Recuerda que la utilidad de los tableros es que tú mismo puedes explorar la información que te interesa. 
 
+Si accediste desde un dispositivo móvil, recuerda desplegar la barra de selección de variables mediante el siguiente ícono con forma de flecha hacia abajo (ˇ) o hacia la derecha (>)
+
+
 ENTRADA EN CONSTRUCCIÓN...
 
 <iframe src="https://br80nx-carlos-v0lez.shinyapps.io/app_demograficos_encspa/"  width="100%" height="800px"></iframe>
