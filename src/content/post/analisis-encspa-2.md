@@ -29,7 +29,7 @@ Por favor espera unos segundos mientras el servidor carga el recurso.
 
 
 
-<iframe src="https://br80nx-carlos-v0lez.shinyapps.io/demograficos/"  width="100%" height="800px"></iframe>
+<iframe src="https://br80nx-carlos-v0lez.shinyapps.io/app_demograficos_encspa/"  width="100%" height="800px"></iframe>
 
 ### Análisis de datos sociodemográficos 
 
